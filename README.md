@@ -1,1 +1,1 @@
-# shiny-sniffle
+# FxCalculator
