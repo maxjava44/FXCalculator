@@ -82,6 +82,9 @@ public class Main extends Application {
 	static RandomWELL44497b generator = new RandomWELL44497b(); //Zufallsgenerator
 	TextField feld = new TextField();
 	int zahlenart = 0;
+	Calculator calculator = new Calculator();
+	int index = 1;
+	int operation = 0;
 	@Override
 	public void start(Stage primaryStage) {
 		try {
@@ -97,12 +100,82 @@ public class Main extends Application {
 		//Logik
 		buttongleich.setOnAction(new EventHandler<ActionEvent>() {
 		    @Override public void handle(ActionEvent e) {
-		        System.out.println("Hello");
+		        lbl.setText("" + calculator.calculate(operation));
+		        calculator.setnumber(String.valueOf(calculator.calculate(operation)), 1);
 		    }
 		});
 		button0.setOnAction(new EventHandler<ActionEvent>() {
 		    @Override public void handle(ActionEvent e) {
-		        System.out.println("World");
+		    	calculator.addnumber("0", index);
+		    }
+		});
+		button1.setOnAction(new EventHandler<ActionEvent>() {
+		    @Override public void handle(ActionEvent e) {
+		        calculator.addnumber("1", index);
+		    }
+		});
+		button2.setOnAction(new EventHandler<ActionEvent>() {
+		    @Override public void handle(ActionEvent e) {
+		    	calculator.addnumber("2", index);
+		    }
+		});
+		button3.setOnAction(new EventHandler<ActionEvent>() {
+		    @Override public void handle(ActionEvent e) {
+		    	calculator.addnumber("3", index);
+		    }
+		});
+		button4.setOnAction(new EventHandler<ActionEvent>() {
+		    @Override public void handle(ActionEvent e) {
+		    	calculator.addnumber("4", index);
+		    }
+		});
+		button5.setOnAction(new EventHandler<ActionEvent>() {
+		    @Override public void handle(ActionEvent e) {
+		    	calculator.addnumber("5", index);
+		    }
+		});
+		button6.setOnAction(new EventHandler<ActionEvent>() {
+		    @Override public void handle(ActionEvent e) {
+		    	calculator.addnumber("6", index);
+		    }
+		});
+		button7.setOnAction(new EventHandler<ActionEvent>() {
+		    @Override public void handle(ActionEvent e) {
+		    	calculator.addnumber("7", index);
+		    }
+		});
+		button8.setOnAction(new EventHandler<ActionEvent>() {
+		    @Override public void handle(ActionEvent e) {
+		    	calculator.addnumber("8", index);
+		    }
+		});
+		button9.setOnAction(new EventHandler<ActionEvent>() {
+		    @Override public void handle(ActionEvent e) {
+		    	calculator.addnumber("9", index);
+		    }
+		});
+		buttonplus.setOnAction(new EventHandler<ActionEvent>() {
+		    @Override public void handle(ActionEvent e) {
+		    	operation = 1;
+		    	index = 2;
+		    }
+		});
+		buttonminus.setOnAction(new EventHandler<ActionEvent>() {
+		    @Override public void handle(ActionEvent e) {
+		    	operation = 2;
+		    	index = 2;
+		    }
+		});
+		buttonmal.setOnAction(new EventHandler<ActionEvent>() {
+		    @Override public void handle(ActionEvent e) {
+		    	operation = 3;
+		    	index = 2;
+		    }
+		});
+		buttongeteilt.setOnAction(new EventHandler<ActionEvent>() {
+		    @Override public void handle(ActionEvent e) {
+		    	operation = 4;
+		    	index = 2;
 		    }
 		});
 		buttonrandom.setOnAction(new EventHandler<ActionEvent>() {
