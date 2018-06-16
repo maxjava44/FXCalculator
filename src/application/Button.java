@@ -18,7 +18,7 @@ package application;
 
 public class Button extends javafx.scene.control.Button {
 
-	public Button(String text,double prefWidth,double prefHeight,double minWidth) {
+	public Button(String text, double prefWidth, double prefHeight, double minWidth) {
 		this.setText(text);
 		this.setPrefSize(prefWidth, prefHeight);
 		this.setMinWidth(minWidth);
