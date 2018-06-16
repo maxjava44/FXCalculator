@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Javafffx.jnlp">
+  <information>
+    <title>Javafffx</title>
+    <vendor>org.max</vendor>
+    <description>Calculator</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="Javafffx.jar" size="7081" download="eager" />
+    <jar href="libs/jdistlib-0.4.5-bin.jar" size="1503847" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="0" height="0" main-class="application.Main"  name="Calculator" />
+  <update check="background"/>
+</jnlp>

@@ -1,0 +1,49 @@
+.root
+{
+	-fx-background-image:url("https://docs.oracle.com/javafx/2/get_started/background.jpg");
+}
+.button
+{
+	-fx-background-color: linear-gradient(to bottom right, #70B5C5, #2A5058); 
+	-fx-effect: innershadow(gaussian,rgba(0,0,0,0.7),10,0.0,0,0);
+	-fx-text-fill: white; 
+	-fx-background-radius:20;
+}
+.button:hover
+{
+	-fx-background-color: linear-gradient(to bottom right,#2A5058, #70B5C5);
+	/*"https://docs.oracle.com/javafx/2/get_started/background.jpg"*/
+
+}
+.button:pressed
+{
+	-fx-background-color:red;
+}
+.buttonStyle2
+{
+	-fx-background-color:linear-gradient(to bottom right,rgb(204,208,200),rgb(134,138,130));
+	-fx-effect: innershadow(gaussian,rgba(0,0,0,0.7),10,0.0,0,0);
+	-fx-text-fill: white;
+	-fx-background-radius:30;
+}
+.buttonStyle2:hover
+{
+	-fx-background-color: linear-gradient(to bottom right,rgb(134,138,130),rgb(204,208,200) );
+}
+.buttonStyle2:pressed
+{
+	-fx-background-color:red;
+}
+.label
+{
+	-fx-text-fill: black ;
+	-fx-text-alignment: left;
+}
+.rect
+{
+	-fx-fill: rgb(255,245,215) ;
+}
+.buttonplatzhalter
+{
+	visibility: false;
+}
