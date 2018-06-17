@@ -27,7 +27,7 @@
 	
 		<mkdir dir="project" />
 		<copy todir="project">
-			<fileset dir="${basedir}/src/application">
+			<fileset dir=".\./src/application">
 				<include name="*" />
 			</fileset>
 		</copy>
@@ -42,7 +42,7 @@
 	
 		<!-- Copy project-libs references -->
 		<copy todir="build/libs">
-			<fileset dir="${basedir}/libs">
+			<fileset dir=".\./libs">
 				<include name="jdistlib-0.4.5-bin.jar"/>
 			</fileset>
 		</copy>
