@@ -20,14 +20,14 @@
 		<mkdir dir="externalLibs" />
 	
 		<copy todir="externalLibs">
-			<fileset dir="libs">
+			<fileset dir="${basedir}/libs">
 				<filename name="jdistlib-0.4.5-bin.jar"/>
 			</fileset>
 		</copy>
 	
 		<mkdir dir="project" />
 		<copy todir="project">
-			<fileset dir="src/application">
+			<fileset dir="${basedir}/src/application">
 				<include name="*" />
 			</fileset>
 		</copy>
@@ -42,7 +42,7 @@
 	
 		<!-- Copy project-libs references -->
 		<copy todir="build/libs">
-			<fileset dir="libs">
+			<fileset dir="${basedir}/libs">
 				<include name="jdistlib-0.4.5-bin.jar"/>
 			</fileset>
 		</copy>
