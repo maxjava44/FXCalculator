@@ -20,15 +20,15 @@
 		<mkdir dir="externalLibs" />
 	
 		<copy todir="externalLibs">
-			<fileset dir="/home/max/Downloads">
+			<fileset dir="libs">
 				<filename name="jdistlib-0.4.5-bin.jar"/>
 			</fileset>
 		</copy>
 	
 		<mkdir dir="project" />
 		<copy todir="project">
-			<fileset dir="/home/max/eclipse-workspace/FxCalculator">
-				<include name="src/**" />
+			<fileset dir="src/application">
+				<include name="*" />
 			</fileset>
 		</copy>
 	
@@ -42,7 +42,7 @@
 	
 		<!-- Copy project-libs references -->
 		<copy todir="build/libs">
-			<fileset dir="externalLibs">
+			<fileset dir="libs">
 				<include name="jdistlib-0.4.5-bin.jar"/>
 			</fileset>
 		</copy>
