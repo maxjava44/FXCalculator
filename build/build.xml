@@ -51,8 +51,8 @@
 	
 		<!-- Copy project sources itself -->
 		<copy todir="build/src">
-			<fileset dir="project/src">
-				<include name="**/*"/>
+			<fileset dir="project">
+				<include name="*"/>
 			</fileset>
 		</copy>
 	
