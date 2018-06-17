@@ -20,7 +20,7 @@
 		<mkdir dir="externalLibs" />
 	
 		<copy todir="externalLibs">
-			<fileset dir="${basedir}/libs">
+			<fileset dir=".\./libs">
 				<filename name="jdistlib-0.4.5-bin.jar"/>
 			</fileset>
 		</copy>
