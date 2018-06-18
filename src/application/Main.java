@@ -97,13 +97,19 @@ public class Main extends Application {
 			e.printStackTrace();
 		}
 		// Logik
+		buttonPI.setOnAction(new EventHandler<ActionEvent>() {
+			@Override
+			public void handle(ActionEvent e) {
+				lbl.setText(lbl.getText() + "3.14159");
+				calculator.addnumber("3.14159", index);
+			}
+		});
 		buttongleich.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent e) {
 				double ergebnis = calculator.calculate(operation);
 				lbl.setText("" + ergebnis);
 				reset();
-				;
 				calculator.addnumber(String.valueOf(ergebnis), index);
 				ergebnis = 0.0;
 			}
