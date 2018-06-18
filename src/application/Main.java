@@ -103,6 +103,7 @@ public class Main extends Application {
 				double ergebnis = calculator.calculate(operation);
 				lbl.setText("" + ergebnis);
 				reset();
+				;
 				calculator.addnumber(String.valueOf(ergebnis), index);
 				ergebnis = 0.0;
 			}
