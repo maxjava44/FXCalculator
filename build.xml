@@ -27,8 +27,8 @@
 	
 		<mkdir dir="project" />
 		<copy todir="project">
-			<fileset dir="application/src">
-				<include name="**/*" />
+			<fileset dir=".">
+				<include name="src/**" />
 			</fileset>
 		</copy>
 	
@@ -51,7 +51,7 @@
 	
 		<!-- Copy project sources itself -->
 		<copy todir="build/src">
-			<fileset dir="application/src">
+			<fileset dir="project/src">
 				<include name="**/*"/>
 			</fileset>
 		</copy>
@@ -66,7 +66,7 @@
 	
 		<!-- Copy over none Java-Files -->
 		<copy todir="build/classes">
-		<fileset dir="application/src">
+		<fileset dir="project/src">
 			<exclude name="**/*.java"/>
 		</fileset>
 		</copy>
