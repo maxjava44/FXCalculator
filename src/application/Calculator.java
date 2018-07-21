@@ -7,7 +7,9 @@ public class Calculator {
 	private double result = 0.0;
 
 	public Calculator() {
-		// TODO Auto-generated constructor stub
+		number1 = "";
+		number2 = "";
+		result = 0.0;
 
 	}
 
