@@ -84,6 +84,7 @@ public class Main extends Application {
 	Calculator calculator = new Calculator();
 	int index = 1;
 	int operation = 0;
+	double ergebnis = 0.0;
 
 	@Override
 	public void start(Stage primaryStage) {
@@ -107,7 +108,7 @@ public class Main extends Application {
 		buttongleich.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent e) {
-				double ergebnis = calculator.calculate(operation);
+				ergebnis = calculator.calculate(operation);
 				lbl.setText("" + ergebnis);
 				reset();
 				calculator.addnumber(String.valueOf(ergebnis), index);
