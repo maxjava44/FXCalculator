@@ -108,11 +108,14 @@ public class Main extends Application {
 		buttongleich.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent e) {
-				ergebnis = calculator.calculate(operation);
-				lbl.setText("" + ergebnis);
-				reset();
-				calculator.addnumber(String.valueOf(ergebnis), index);
-				ergebnis = 0.0;
+				if(index == 2)
+				{
+					ergebnis = calculator.calculate(operation);
+					lbl.setText("" + ergebnis);
+					reset();
+					calculator.addnumber(String.valueOf(ergebnis), index);
+					ergebnis = 0.0;
+				}
 			}
 		});
 		buttonAC.setOnAction(new EventHandler<ActionEvent>() {
