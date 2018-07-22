@@ -30,6 +30,7 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
       - run: sudo apt-get -y install openjfx
+      - run: mvn maven-dependency-plugin:copy-dependencies
       - run: mvn jfx:jar
 
       - save_cache:
