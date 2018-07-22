@@ -11,7 +11,7 @@
     with this program; if not, write to the Free Software Foundation, Inc.,
     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.*/
 
-package application;
+package FXCalculator;
 
 import javafx.application.Application;
 import javafx.beans.value.ChangeListener;
@@ -25,7 +25,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-import application.Button;
+import FXCalculator.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.shape.Rectangle;
@@ -78,7 +78,7 @@ public class Main extends Application {
 	static RandomWELL44497b generator = new RandomWELL44497b(); // Zufallsgenerator
 	TextField feld = new TextField();
 	int zahlenart = 0;
-	Calculator calculator = new Calculator();
+	FXCalculator.Calculator calculator = new Calculator();
 	int index = 1;
 	int operation = 0;
 	double ergebnis = 0.0;
