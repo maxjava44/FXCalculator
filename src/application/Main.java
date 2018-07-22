@@ -63,11 +63,11 @@ public class Main extends Application {
 	Button buttongeteilt = new Button("/", 30.0, 30.0, 30.0);
 	Button buttonmal = new Button("*", 30.0, 30.0, 30.0);
 	Button buttonrandom = new Button("R", 30.0, 30.0, 30.0);
-	Button buttonplatzhalter = new Button("", 30.0, 30.0, 30.0);
 	Button buttonAC = new Button("D", 30.0, 30.0, 30.0);
 	Button buttonPI = new Button("π", 30.0, 30.0, 30.0);
 	Button buttondialog = new Button("Bestätigen", 90.0, 30.0, 30.0);
 	Button buttonpunkt = new Button(".", 30.0, 30.0, 30.0);
+	Button buttonroot = new Button("√", 30.0, 30.0, 30.0);
 	Label lbl = new Label(""); // Textfelder
 	Label lbldialog = new Label(
 			"Geben sie die maximale Zahl des Zugfallsgeneratoren ein(Bitte geben sie nur Integer ein)");
@@ -85,7 +85,7 @@ public class Main extends Application {
 	int index = 1;
 	int operation = 0;
 	double ergebnis = 0.0;
-
+    int indexstring = 0;
 	@Override
 	public void start(Stage primaryStage) {
 		try {
@@ -98,6 +98,18 @@ public class Main extends Application {
 			e.printStackTrace();
 		}
 		// Logik
+		buttonroot.setOnAction(new EventHandler<ActionEvent>() {
+			@Override
+			public void handle(ActionEvent e) {
+				if(calculator.getnumber(index) < 0)
+				{
+				}else {
+					lbl.setText(lbl.getText() + String.valueOf(Math.sqrt(calculator.getnumber(index))));
+					calculator.setnumber(String.valueOf(Math.sqrt(calculator.getnumber(index))), index);
+				}
+			}
+		});
+		
 		buttonPI.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent e) {
@@ -205,7 +217,7 @@ public class Main extends Application {
 		buttonplus.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent e) {
-				lbl.setText(lbl.getText() + " + ");
+				lbl.setText(lbl.getText() + "+");
 				operation = 1;
 				index = 2;
 			}
@@ -334,12 +346,11 @@ public class Main extends Application {
 		settoggleGroup(group, radiobuttonint, radiobuttondouble, radiobuttonlong);
 		dialogPane.getChildren().addAll(radiobuttondouble, radiobuttonint, radiobuttonlong, feld, lbldialog,
 				buttondialog);
-		setCSSStyle("buttonplatzhalter", buttonplatzhalter);
 		makeVBoxesReady(vertikaleButtonBoxes);
 		vertikaleButtonBoxes[0].getChildren().addAll(buttonrandom, buttonmal, buttonminus, buttonplus, buttongleich);
 		vertikaleButtonBoxes[1].getChildren().addAll(buttonAC, buttongeteilt, button9, button6, button3);
 		vertikaleButtonBoxes[2].getChildren().addAll(buttonpunkt, buttonPI, button8, button5, button2);
-		vertikaleButtonBoxes[3].getChildren().addAll(buttonplatzhalter, button7, button4, button1, button0);
+		vertikaleButtonBoxes[3].getChildren().addAll(buttonroot, button7, button4, button1, button0);
 		buttonboxes.setSpacing(5);
 		buttonboxes.setPadding(new Insets(0, 0, 10, 10));
 		buttonboxes.getChildren().addAll(vertikaleButtonBox4, vertikaleButtonBox3, vertikaleButtonBox2,
@@ -347,7 +358,7 @@ public class Main extends Application {
 		AnchorPane.setBottomAnchor(buttonboxes, 5.0);
 		AnchorPane.setRightAnchor(buttonboxes, 5.0);
 		setCSSStyle("buttonStyle2", buttonPI, buttonAC, buttongeteilt, buttonmal, buttonminus, buttonplus, buttongleich,
-				buttonrandom, buttonpunkt);
+				buttonrandom, buttonpunkt, buttonroot);
 		AnchorPane.setTopAnchor(lbl, 22.0);
 		AnchorPane.setRightAnchor(lbl, 17.0);
 		rect.getStyleClass().add("rect");
