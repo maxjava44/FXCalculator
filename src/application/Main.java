@@ -85,7 +85,6 @@ public class Main extends Application {
 	int index = 1;
 	int operation = 0;
 	double ergebnis = 0.0;
-    int indexstring = 0;
 	@Override
 	public void start(Stage primaryStage) {
 		try {
@@ -101,9 +100,8 @@ public class Main extends Application {
 		buttonroot.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent e) {
-				if(calculator.getnumber(index) < 0)
+				if(calculator.getnumber(index) > 0)
 				{
-				}else {
 					lbl.setText(lbl.getText() + String.valueOf(Math.sqrt(calculator.getnumber(index))));
 					calculator.setnumber(String.valueOf(Math.sqrt(calculator.getnumber(index))), index);
 				}
@@ -217,7 +215,7 @@ public class Main extends Application {
 		buttonplus.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent e) {
-				lbl.setText(lbl.getText() + "+");
+				lbl.setText(lbl.getText() + " + ");
 				operation = 1;
 				index = 2;
 			}
