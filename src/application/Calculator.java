@@ -5,6 +5,7 @@ public class Calculator {
 	private String number1 = "";
 	private String number2 = "";
 	private double result = 0.0;
+	private double nummer;
 
 	public Calculator() {
 		number1 = "";
@@ -20,7 +21,17 @@ public class Calculator {
 			number2 = number2 + var;
 		}
 	}
-
+    
+	double getnumber(int index)
+	{
+		if (index == 1) {
+			nummer = Double.parseDouble(number1);
+		} else {
+			nummer = Double.parseDouble(number2);
+		}
+		return nummer;
+	}
+	
 	void setnumber(String var, int index) {
 		if (index == 1) {
 			number1 = var;
