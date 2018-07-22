@@ -7,8 +7,7 @@
   <version>1.0-SNAPSHOT</version>
   <name>FXCalculator</name>
   <url>http://maven.apache.org</url>
-  <build>
-    <dependencies>
+  <dependencies>
       <dependency>
         <groupId>junit</groupId>
         <artifactId>junit</artifactId>
@@ -21,6 +20,7 @@
       <version>0.4.5</version>
   </dependency>
     </dependencies>
+  <build>
   <plugin>
       <groupId>com.zenjava</groupId>
       <artifactId>javafx-maven-plugin</artifactId>
