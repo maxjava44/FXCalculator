@@ -89,6 +89,7 @@ public class Main extends Application {
 	public void start(Stage primaryStage) {
 		try {
 			// Oberfläche
+			makeVBoxesReady(vertikaleButtonBoxes);
 			makeUI();
 			primaryStage.setTitle("Calculator");
 			primaryStage.setScene(scene);
@@ -288,6 +289,13 @@ public class Main extends Application {
 						calculator.addnumber(String.valueOf(numberlong), index);
 						lbl.setText(lbl.getText() + numberlong);
 						break;
+					default:
+						int n = Integer.parseInt(feld.getText());
+						int numberint = generator.nextInt(n);
+						calculator.setnumber("", index);
+						calculator.addnumber(String.valueOf(numberint), index);
+						lbl.setText(lbl.getText() + numberint);
+						break;
 					}
 					if (group.getSelectedToggle() == null) {
 						lbldialog.setText("Du musst einen Zahlentyp auswählen");
@@ -344,7 +352,6 @@ public class Main extends Application {
 		settoggleGroup(group, radiobuttonint, radiobuttondouble, radiobuttonlong);
 		dialogPane.getChildren().addAll(radiobuttondouble, radiobuttonint, radiobuttonlong, feld, lbldialog,
 				buttondialog);
-		makeVBoxesReady(vertikaleButtonBoxes);
 		vertikaleButtonBoxes[0].getChildren().addAll(buttonrandom, buttonmal, buttonminus, buttonplus, buttongleich);
 		vertikaleButtonBoxes[1].getChildren().addAll(buttonAC, buttongeteilt, button9, button6, button3);
 		vertikaleButtonBoxes[2].getChildren().addAll(buttonpunkt, buttonPI, button8, button5, button2);
