@@ -55,6 +55,9 @@ public class Calculator {
 			case 4:
 				result = Double.parseDouble(number1) / Double.parseDouble(number2);
 				break;
+			default:
+				System.out.println("Error");
+				break;
 			}
 		} catch (Exception e) {
 			System.out.println("Error");
