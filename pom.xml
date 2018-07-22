@@ -21,13 +21,15 @@
   </dependency>
     </dependencies>
   <build>
-  <plugin>
-      <groupId>com.zenjava</groupId>
-      <artifactId>javafx-maven-plugin</artifactId>
-      <version>8.8.3</version>
-      <configuration>
-          <mainClass>org.maxjava44.FXCalculator.Main</mainClass>
-      </configuration>
-  </plugin>
+  <plugins> 
+    <plugin>
+        <groupId>com.zenjava</groupId>
+        <artifactId>javafx-maven-plugin</artifactId>
+        <version>8.8.3</version>
+        <configuration>
+            <mainClass>org.maxjava44.FXCalculator.Main</mainClass>
+        </configuration>
+    </plugin>
+    </plugins> 
   </build>
 </project>
