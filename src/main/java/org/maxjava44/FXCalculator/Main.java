@@ -266,7 +266,7 @@ public class Main extends Application {
 					switch (zahlenart) {
 					case 1:
 						int n = Integer.parseInt(feld.getText());
-						int numberint = generator.nextInt(n);
+					        int numberint = generator.nextInt(n);
 						calculator.setnumber("", index);
 						calculator.addnumber(String.valueOf(numberint), index);
 						lbl.setText(lbl.getText() + numberint);
@@ -286,11 +286,11 @@ public class Main extends Application {
 						lbl.setText(lbl.getText() + numberlong);
 						break;
 					default:
-						int n = Integer.parseInt(feld.getText());
-						int numberint = generator.nextInt(n);
+						int n2 = Integer.parseInt(feld.getText());
+						int numberint2 = generator.nextInt(n);
 						calculator.setnumber("", index);
-						calculator.addnumber(String.valueOf(numberint), index);
-						lbl.setText(lbl.getText() + numberint);
+						calculator.addnumber(String.valueOf(numberint2), index);
+						lbl.setText(lbl.getText() + numberint2);
 						break;
 					}
 					if (group.getSelectedToggle() == null) {
