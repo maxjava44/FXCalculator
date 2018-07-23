@@ -32,7 +32,7 @@ import javafx.scene.shape.Rectangle;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Toggle;
 import javafx.scene.control.ToggleGroup;
-import jdistlib.rng.RandomWELL44497b;
+import net.sourceforge.jdistlib.rng.RandomWELL44497b;
 
 public class Main extends Application {
 	final ToggleGroup group = new ToggleGroup();
