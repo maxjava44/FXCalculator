@@ -29,6 +29,21 @@
         <configuration>
             <mainClass>FXCalculator.Main</mainClass>
         </configuration>
+      <bundleArguments>
+                        <runtime />
+                    </bundleArguments>
+
+                    <additionalBundlerResources>src/main/deploy/bundlers</additionalBundlerResources>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>create-jfxjar</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>build-jar</goal>
+                        </goals>
+                    </execution>
+                   </executions>
     </plugin>
    </plugins> 
   </build>
