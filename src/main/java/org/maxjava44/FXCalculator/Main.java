@@ -99,7 +99,7 @@ public class Main extends Application {
 			public void handle(ActionEvent e) {
 				if(calculator.getnumber(index) > 0)
 				{
-					lbl.setText(lbl.getText() + String.valueOf(Math.sqrt(calculator.getnumber(index))));
+					lbl.setText(String.valueOf(Math.sqrt(calculator.getnumber(index))));
 					calculator.setnumber(String.valueOf(Math.sqrt(calculator.getnumber(index))), index);
 				}
 			}
@@ -287,7 +287,7 @@ public class Main extends Application {
 						break;
 					default:
 						int n2 = Integer.parseInt(feld.getText());
-						int numberint2 = generator.nextInt(n);
+						int numberint2 = generator.nextInt(n2);
 						calculator.setnumber("", index);
 						calculator.addnumber(String.valueOf(numberint2), index);
 						lbl.setText(lbl.getText() + numberint2);
