@@ -22,7 +22,6 @@
     </dependencies>
   <build>
   <plugins> 
-  </plugin>
     <plugin>
         <groupId>com.zenjava</groupId>
         <artifactId>javafx-maven-plugin</artifactId>
