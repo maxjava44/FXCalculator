@@ -11,6 +11,9 @@ Simply clone this project then make
 
 cd FXCalculator
 
-and finally
+and
 
-ant -f build.xml
+mvn jfx:jar
+
+and then 
+
