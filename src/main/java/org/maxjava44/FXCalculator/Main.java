@@ -373,7 +373,7 @@ public class Main extends Application {
 		root.getChildren().add(rect);
 		root.getChildren().add(lbl);
 		root.getChildren().add(buttonboxes);
-		scene.getStylesheets().add(getClass().getResource("src/main/resources/application.css").toExternalForm());
+		scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 	}
 
 	void reset() {
