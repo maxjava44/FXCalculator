@@ -66,8 +66,8 @@ public class Main extends Application {
 	Button buttonpunkt = new Button(".", 30.0, 30.0, 30.0);
 	Button buttonroot = new Button("√", 30.0, 30.0, 30.0);
 	Label lbl = new Label(""); // Textfelder
-//	Label lbldialog = new Label(
-			"Geben sie die maximale Zahl des Zugfallsgeneratoren ein(Bitte geben sie nur Integer ein)");
+/*	Label lbldialog = new Label(
+			"Geben sie die maximale Zahl des Zugfallsgeneratoren ein(Bitte geben sie nur Integer ein)");*/
 	Rectangle rect = new Rectangle();
 	VBox vertikaleButtonBox = new VBox(); // Vertikale Boxen
 	VBox vertikaleButtonBox2 = new VBox();
