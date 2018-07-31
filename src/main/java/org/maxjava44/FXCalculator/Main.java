@@ -65,9 +65,10 @@ public class Main extends Application {
 	Button buttondialog = new Button("Bestätigen", 90.0, 30.0, 30.0);
 	Button buttonpunkt = new Button(".", 30.0, 30.0, 30.0);
 	Button buttonroot = new Button("√", 30.0, 30.0, 30.0);
+	Button buttonplatzhalter = new Button("", 30.0, 30.0, 30.0);
 	Label lbl = new Label(""); // Textfelder
-//	Label lbldialog = new Label(
-			"Geben sie die maximale Zahl des Zugfallsgeneratoren ein(Bitte geben sie nur Integer ein)");
+/*	Label lbldialog = new Label(
+			"Geben sie die maximale Zahl des Zugfallsgeneratoren ein(Bitte geben sie nur Integer ein)");*/
 	Rectangle rect = new Rectangle();
 	VBox vertikaleButtonBox = new VBox(); // Vertikale Boxen
 	VBox vertikaleButtonBox2 = new VBox();
@@ -75,7 +76,7 @@ public class Main extends Application {
 	VBox vertikaleButtonBox4 = new VBox();
 	HBox buttonboxes = new HBox(); // Horionzentale Box
 	VBox[] vertikaleButtonBoxes = { vertikaleButtonBox, vertikaleButtonBox2, vertikaleButtonBox3, vertikaleButtonBox4 };
-//	static RandomWELL44497b generator = new RandomWELL44497b(); // Zufallsgenerator
+//	static RandomWELL44497b generator = new RandomWELL44497b();  //Zufallsgenerator
 	TextField feld = new TextField();
 	int zahlenart = 0;
 	FXCalculator.Calculator calculator = new Calculator();
@@ -306,7 +307,7 @@ public class Main extends Application {
 		group.selectedToggleProperty().addListener(new ChangeListener<Toggle>() {
 			public void changed(ObservableValue<? extends Toggle> ov, Toggle old_toggle, Toggle new_toggle) {
 				if (group.getSelectedToggle() == null) {
-					lbldialog.setText("Du musst einen Zahlentyp auswählen");
+					/*lbldialog.setText("Du musst einen Zahlentyp auswählen");*/
 				} else {
 					if (group.getSelectedToggle().getUserData().toString() == "Integer") {
 						zahlenart = 1;
@@ -345,14 +346,15 @@ public class Main extends Application {
 	}
 
 	void makeUI() {
+		buttonplatzhalter.getStyleClass().add("buttonplatzhalter");
 		settoggleGroup(group, radiobuttonint, radiobuttondouble, radiobuttonlong);
-		dialogPane.getChildren().addAll(radiobuttondouble, radiobuttonint, radiobuttonlong, feld, lbldialog,
+		dialogPane.getChildren().addAll(radiobuttondouble, radiobuttonint, radiobuttonlong, feld, /*lbldialog*/
 				buttondialog);
 		makeVBoxesReady(vertikaleButtonBoxes);
-		vertikaleButtonBoxes[0].getChildren().addAll(/*buttonrandom,*/ buttonmal, buttonminus, buttonplus, buttongleich);
+		vertikaleButtonBoxes[0].getChildren().addAll(/*buttonrandom,*/ buttonplatzhalter,buttonmal, buttonminus, buttonplus, buttongleich);
 		vertikaleButtonBoxes[1].getChildren().addAll(buttonAC, buttongeteilt, button9, button6, button3);
 		vertikaleButtonBoxes[2].getChildren().addAll(buttonpunkt, buttonPI, button8, button5, button2);
-		vertikaleButtonBoxes[3].getChildren().addAll(buttonroot, button7, button4, button1, button0);
+		vertikaleButtonBoxes[3].getChildren().addAll(buttonroot, button0, button7, button4, button1);
 		buttonboxes.setSpacing(5);
 		buttonboxes.setPadding(new Insets(0, 0, 10, 10));
 		buttonboxes.getChildren().addAll(vertikaleButtonBox4, vertikaleButtonBox3, vertikaleButtonBox2,
@@ -360,7 +362,7 @@ public class Main extends Application {
 		AnchorPane.setBottomAnchor(buttonboxes, 5.0);
 		AnchorPane.setRightAnchor(buttonboxes, 5.0);
 		setCSSStyle("buttonStyle2", buttonPI, buttonAC, buttongeteilt, buttonmal, buttonminus, buttonplus, buttongleich,
-				buttonrandom, buttonpunkt, buttonroot);
+				/*buttonrandom*/ buttonpunkt, buttonroot);
 		AnchorPane.setTopAnchor(lbl, 22.0);
 		AnchorPane.setRightAnchor(lbl, 17.0);
 		rect.getStyleClass().add("rect");

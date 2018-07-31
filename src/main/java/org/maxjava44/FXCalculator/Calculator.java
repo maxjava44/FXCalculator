@@ -21,7 +21,7 @@ public class Calculator {
 			number2 = number2 + var;
 		}
 	}
-    
+
 	double getnumber(int index)
 	{
 		if (index == 1) {
@@ -31,7 +31,7 @@ public class Calculator {
 		}
 		return nummer;
 	}
-	
+
 	void setnumber(String var, int index) {
 		if (index == 1) {
 			number1 = var;
