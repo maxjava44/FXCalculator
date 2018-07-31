@@ -6,7 +6,7 @@ It's my first project so it's just an simple calculator.
 
 # Building
 
-Simply clone this project then make 
+Simply clone this project then do
 
 cd FXCalculator
 
