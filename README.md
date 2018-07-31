@@ -16,3 +16,4 @@ mvn jfx:jar
 
 and then 
 
+mvn jfx:run
