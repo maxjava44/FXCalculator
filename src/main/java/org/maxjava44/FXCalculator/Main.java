@@ -59,14 +59,14 @@ public class Main extends Application {
 	Button buttonminus = new Button("-", 30.0, 30.0, 30.0);
 	Button buttongeteilt = new Button("/", 30.0, 30.0, 30.0);
 	Button buttonmal = new Button("*", 30.0, 30.0, 30.0);
-	Button buttonrandom = new Button("R", 30.0, 30.0, 30.0);
+//	Button buttonrandom = new Button("R", 30.0, 30.0, 30.0);
 	Button buttonAC = new Button("D", 30.0, 30.0, 30.0);
 	Button buttonPI = new Button("π", 30.0, 30.0, 30.0);
 	Button buttondialog = new Button("Bestätigen", 90.0, 30.0, 30.0);
 	Button buttonpunkt = new Button(".", 30.0, 30.0, 30.0);
 	Button buttonroot = new Button("√", 30.0, 30.0, 30.0);
 	Label lbl = new Label(""); // Textfelder
-	Label lbldialog = new Label(
+//	Label lbldialog = new Label(
 			"Geben sie die maximale Zahl des Zugfallsgeneratoren ein(Bitte geben sie nur Integer ein)");
 	Rectangle rect = new Rectangle();
 	VBox vertikaleButtonBox = new VBox(); // Vertikale Boxen
@@ -75,7 +75,7 @@ public class Main extends Application {
 	VBox vertikaleButtonBox4 = new VBox();
 	HBox buttonboxes = new HBox(); // Horionzentale Box
 	VBox[] vertikaleButtonBoxes = { vertikaleButtonBox, vertikaleButtonBox2, vertikaleButtonBox3, vertikaleButtonBox4 };
-	static RandomWELL44497b generator = new RandomWELL44497b(); // Zufallsgenerator
+//	static RandomWELL44497b generator = new RandomWELL44497b(); // Zufallsgenerator
 	TextField feld = new TextField();
 	int zahlenart = 0;
 	FXCalculator.Calculator calculator = new Calculator();
@@ -104,7 +104,7 @@ public class Main extends Application {
 				}
 			}
 		});
-		
+
 		buttonPI.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent e) {
@@ -241,7 +241,7 @@ public class Main extends Application {
 				index = 2;
 			}
 		});
-		buttonrandom.setOnAction(new EventHandler<ActionEvent>() {
+	/*	buttonrandom.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent e) {
 				AnchorPane.setTopAnchor(feld, 30.0);
@@ -258,8 +258,8 @@ public class Main extends Application {
 				dialogStage.centerOnScreen();
 				dialogStage.show();
 			}
-		});
-		buttondialog.setOnAction(new EventHandler<ActionEvent>() {
+		});*/
+		/*buttondialog.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent e) {
 				try {
@@ -302,7 +302,7 @@ public class Main extends Application {
 					lbldialog.setText("Die Zahl ist kein Integer");
 				}
 			}
-		});
+		});*/
 		group.selectedToggleProperty().addListener(new ChangeListener<Toggle>() {
 			public void changed(ObservableValue<? extends Toggle> ov, Toggle old_toggle, Toggle new_toggle) {
 				if (group.getSelectedToggle() == null) {
@@ -349,7 +349,7 @@ public class Main extends Application {
 		dialogPane.getChildren().addAll(radiobuttondouble, radiobuttonint, radiobuttonlong, feld, lbldialog,
 				buttondialog);
 		makeVBoxesReady(vertikaleButtonBoxes);
-		vertikaleButtonBoxes[0].getChildren().addAll(buttonrandom, buttonmal, buttonminus, buttonplus, buttongleich);
+		vertikaleButtonBoxes[0].getChildren().addAll(/*buttonrandom,*/ buttonmal, buttonminus, buttonplus, buttongleich);
 		vertikaleButtonBoxes[1].getChildren().addAll(buttonAC, buttongeteilt, button9, button6, button3);
 		vertikaleButtonBoxes[2].getChildren().addAll(buttonpunkt, buttonPI, button8, button5, button2);
 		vertikaleButtonBoxes[3].getChildren().addAll(buttonroot, button7, button4, button1, button0);
